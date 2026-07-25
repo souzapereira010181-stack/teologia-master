@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Backend: iniciar servidor",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--workspace=backend"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Web: abrir no Chrome",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/web/src"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Backend + Web",
+      "configurations": ["Backend: iniciar servidor", "Web: abrir no Chrome"]
+    }
+  ]
+}

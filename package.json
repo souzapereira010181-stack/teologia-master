@@ -1,0 +1,22 @@
+{
+  "name": "teologia-master",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma de estudos bíblicos e teológicos - monorepo (backend + web)",
+  "workspaces": [
+    "backend",
+    "web"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "db:init": "npm run db:init --workspace=backend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:web": "npm run dev --workspace=web",
+    "dev": "concurrently -n backend,web -c blue,green \"npm run dev:backend\" \"npm run dev:web\"",
+    "build:web": "npm run build --workspace=web",
+    "start:backend": "npm run start --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

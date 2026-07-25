@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+
+# Build
+web/dist/
+
+# Banco de dados local
+backend/data/*.db
+backend/data/*.db-journal
+backend/data/*.db-wal
+backend/data/*.db-shm
+
+# Variáveis de ambiente
+.env
+backend/.env
+web/.env
+
+# Logs e sistema
+*.log
+.DS_Store

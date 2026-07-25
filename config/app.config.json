@@ -1,0 +1,15 @@
+{
+  "app": {
+    "name": "Teologia Master",
+    "defaultTranslation": "Nova Versão Internacional",
+    "supportedTranslations": [
+      "Nova Versão Internacional",
+      "Almeida Revista e Corrigida",
+      "Revisão de Jerusalém"
+    ]
+  },
+  "ports": {
+    "backend": 4000,
+    "web": 5173
+  }
+}
